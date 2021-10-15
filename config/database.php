@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -91,6 +91,12 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'mongodb' => [
+                  'driver' => 'mongodb',
+                  'dsn' => env('DB_URI', 'mongodb+srv://walter:fai09ds@cluster0.bfjqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
+                  'database' => 'db',
+          
+        ]
     ],
 
     /*
